@@ -2,7 +2,7 @@
 export default `
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Order Confirm Email</title>
+  <title>Email de confirmação de encomenda</title>
   <style type="text/css">
     /* Media Query for mobile */
 
@@ -121,7 +121,7 @@ export default `
                   <td height="10" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
                 </tr>
                 <tr>
-                  <td height="4" align="left" valign="top" bgcolor="#1999dd" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                  <td height="4" align="left" valign="top" bgcolor="#0F5BFF" style="font-size:1px; line-height:1px;">&nbsp;</td>
                 </tr>
                 <tr>
                   <td align="center" valign="top">
@@ -136,7 +136,7 @@ export default `
                             </tr>
                             <tr>
                               <td align="left" valign="top">
-                                <a href="#"><img src="{{emailLogo}}" width="49" height="49"
+                                <a href="https://guimaraes.proximcity.pt"><img src="https://dev-proxim-bucket.s3.us-east-2.amazonaws.com/logo_cmg_dark_35e5e994cd.png" height="49"
                                       alt="logo"></a>
                               </td>
                             </tr>
@@ -144,7 +144,7 @@ export default `
                               <td height="31" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
                             </tr>
                             <tr>
-                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:22px; font-weight:bold; line-height:22px; color:#1e98d5;">Order Confirmation</td>
+                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:22px; font-weight:bold; line-height:22px; color:#0F5BFF;">Confirmação da encomenda</td>
                             </tr>
                             <!-- End Header -->
 
@@ -161,9 +161,9 @@ export default `
                                               <td align="left" valign="top" height="25" style="line-height:1px; font-size:1px;">&nbsp;</td>
                                             </tr>
                                             <tr>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Your Order</td>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Order Date</td>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Status</td>
+                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">A sua encomenda</td>
+                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Data</td>
+                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Estado</td>
                                             </tr>
                                           </tbody>
                                         </table>
@@ -184,9 +184,9 @@ export default `
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
                                           <tbody>
                                             <tr>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#1999dd; font-family:Arial, helvetica;"><a href="{{orderUrl}}" style="color:#1999dd;">{{order.referenceId}}</a></td>
+                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#0F5BFF; font-family:Arial, helvetica;"><a href="{{orderUrl}}" style="color:#0F5BFF;">{{order.referenceId}}</a></td>
                                               <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">{{orderDate}}</td>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Not shipped</td>
+                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Não enviada</td>
                                             </tr>
                                           </tbody>
                                         </table>
@@ -204,9 +204,9 @@ export default `
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
                                           <tbody>
                                             <tr>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Shipping Address</td>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Billing Address</td>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Payment Type</td>
+                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Morada de entrega</td>
+                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Morada de faturação</td>
+                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Método de pagamento</td>
                                             </tr>
                                           </tbody>
                                         </table>
@@ -233,7 +233,7 @@ export default `
                                                 {{/with}}
                                               </td>
                                               <td width="33%" align="left" valign="top" style="font-size:10px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">
-                                                {{#with billing.address}}
+                                                {{#with shipping.address}}
                                                   {{this.fullName}}<br>{{this.address}}<br>{{this.city}} {{this.region}} {{this.postal}}
                                                 {{/with}}
                                               </td>
@@ -247,7 +247,7 @@ export default `
                                               <td valign="top" align="left" height="40" style="line-height:1px; font-size:1px;">&nbsp;</td>
                                             </tr>
                                             <tr>
-                                              <td valign="top" align="left" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Item(s)</td>
+                                              <td valign="top" align="left" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Artigo(s)</td>
                                             </tr>
                                           </tbody>
                                         </table>
@@ -319,13 +319,10 @@ export default `
                                               <td valign="top" align="right" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Subtotal: {{billing.subtotal}}</td>
                                             </tr>
                                             <tr>
-                                              <td valign="top" align="right" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Shipping: {{billing.shipping}}</td>
+                                              <td valign="top" align="right" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Entrega: {{billing.shipping}}</td>
                                             </tr>
                                             <tr>
-                                              <td valign="top" align="right" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Tax: {{billing.taxes}}</td>
-                                            </tr>
-                                            <tr>
-                                              <td valign="top" align="right" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Discounts: {{billing.discounts}}</td>
+                                              <td valign="top" align="right" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Descontos: {{billing.discounts}}</td>
                                             </tr>
                                             <tr>
                                               <td valign="top" align="left" height="10" style="line-height:1px; font-size:1px;">&nbsp;</td>
@@ -341,7 +338,7 @@ export default `
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                   <tbody>
                                                     <tr>
-                                                      <td valign="top" align="left" style="font-size:12px; line-height:normal; color:#a2a1a3; font-family:Arial, helvetica;">ORDER TOTAL:</td>
+                                                      <td valign="top" align="left" style="font-size:12px; line-height:normal; color:#a2a1a3; font-family:Arial, helvetica;">TOTAL:</td>
                                                       <td valign="top" align="right" style="font-size:22px; line-height:normal; color:#4d4d4e; font-family:Arial, helvetica;">{{billing.total}}</td>
                                                     </tr>
                                                   </tbody>
@@ -362,44 +359,36 @@ export default `
                             <tr>
                               <td height="32" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
                             </tr>
-                            <tr>
-                              <td height="1" align="left" valign="middle" bgcolor="#e2e2e2" style="font-size:1px; line-height:1px;">&nbsp; YOOOOOOOOO</td>
-                            </tr>
+                            
                             <tr>
                               <td height="15" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
                             </tr>
                             <tr>
-                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:17px;">You received this email because you created an order with {{shopName}}. Questions or suggestions? Email us at <a href="mailto:{{contactEmail}}" style="text-decoration:none; color:#1e98d5;">{{contactEmail}}</a></td>
+                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:17px;">Recebeu este email porque fez uma encomenda em {{shopName}}. Tem alguma pergunta ou sugestão? Envie-nos um email para <a href="mailto:info@proximcity.pt" style="text-decoration:none; color:#0F5BFF;">info@proximcity.pt</a></td>
                             </tr>
                             <!-- Begin Social Icons -->
-                            {{#if socialLinks.display}}
+                            
+                            <tr>
+                              <td height="21" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:17px;">Siga-nos em</a></td>
+                            </tr>
                             <tr>
                               <td height="21" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
                             </tr>
                             <tr>
                               <td align="left" valign="top">
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
+                                <table border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
+                                  
                                   <tr>
-                                    {{#if socialLinks.twitter.display}}
-                                    <td width="26" align="left" valign="top">
-                                      <a href="{{socialLinks.twitter.link}}"><img src="{{socialLinks.twitter.icon}}" width="26"
-                                            height="26" alt="twt_icon"></a>
+                                    <td align="left" valign="top">
+                                      <a href="https://facebook.com/guimaraesproximcity" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:12px; color:#0F5BFF; margin-right: 20px;">Facebook</a>
                                     </td>
-                                    {{/if}}
-                                    {{#if socialLinks.facebook.display}}
-                                    <td width="10" align="left" valign="top">&nbsp;</td>
-                                    <td width="26" align="left" valign="top">
-                                      <a href="{{socialLinks.facebook.link}}"><img src="{{socialLinks.facebook.icon}}" width="26"
-                                            height="26" alt="fb_icon"></a>
+                                    
+                                    <td align="left" valign="top">
+                                      <a href="https://instagram.com/proximcity" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:12px; color:#0F5BFF;">Instagram</a>
                                     </td>
-                                    {{/if}}
-                                    {{#if socialLinks.googlePlus.display}}
-                                    <td width="10" align="left" valign="top">&nbsp;</td>
-                                    <td>
-                                      <a href="{{socialLinks.googlePlus.link}}"><img src="{{socialLinks.googlePlus.icon}}" width="26"
-                                            height="26" alt="g_plus_icon"></a>
-                                    </td>
-                                    {{/if}}
                                   </tr>
                                 </table>
                               </td>
@@ -407,26 +396,21 @@ export default `
                             <tr>
                               <td height="28" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
                             </tr>
-                            {{else}}
                             <tr>
                               <td height="15" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
                             </tr>
-                            {{/if}}
                             <!-- End Social Icons -->
                             <tr>
-                              <td height="3" align="left" valign="top" bgcolor="#1f97d4" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                              <td height="3" align="left" valign="top" bgcolor="#0F5BFF" style="font-size:1px; line-height:1px;">&nbsp;</td>
                             </tr>
                             <tr>
                               <td height="18" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
                             </tr>
                             <tr>
-                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:12px; color:#4d4c4d;">&copy; {{copyrightDate}} {{#if legalName}}{{legalName}}{{else}}{{shopName}}{{/if}}. All rights reserved</td>
+                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:12px; color:#4d4c4d;">&copy; 2020 Guimarães Proximcity. Todos os direitos reservados</td>
                             </tr>
                             <tr>
                               <td height="8" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; font-weight:normal; line-height:10px; color:#787878;">{{#if physicalAddress}}{{physicalAddress.address}}, {{physicalAddress.city}}, {{physicalAddress.region}} {{physicalAddress.postal}}{{/if}}</td>
                             </tr>
                             <!-- End footer -->
 
