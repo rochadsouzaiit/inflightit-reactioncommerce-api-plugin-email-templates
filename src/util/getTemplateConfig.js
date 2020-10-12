@@ -19,14 +19,37 @@ export default async function getTemplateConfig(context, shopId, templateName, l
   if (!shop) throw new Error(`Shop with ID ${shopId} not found`);
 
   const { language: shopLanguage } = shop;
+  let templateDoc;
 
   // check database for a matching template
-  const templateDoc = await Templates.findOne({
+  templateDoc = await Templates.findOne({
     language: language || shopLanguage,
     name: templateName,
     shopId,
     type: "email"
   });
+
+  if (templateDoc) return templateDoc;
+
+  // Add fallback for primary store
+  const primaryShop = await Shops.findOne({
+    shopType: "primary"
+  }, {
+    projection: {
+      id: 1
+    }
+  });
+
+  if (!primaryShop) throw new Error(`No email template ${templateName} found in primary store for language ${language || shopLanguage}`);
+
+  templateDoc = await Templates.findOne({
+    language: language || shopLanguage,
+    name: templateName,
+    shopId: primaryShop._id,
+    type: "email"
+  });
+
+
   if (!templateDoc) throw new Error(`No email template ${templateName} found for language ${language || shopLanguage}`);
 
   return templateDoc;
