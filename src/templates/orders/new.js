@@ -1,432 +1,304 @@
 /* eslint-disable max-len */
 export default `
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Email de confirmação de encomenda</title>
-  <style type="text/css">
-    /* Media Query for mobile */
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Invoice</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+        <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+        />
+        
+    <style>
+      @media print {
+        @page {
+          size: A3;
+        }
+      }
+      ul {
+        padding: 0;
+        margin: 0 0 1rem 0;
+        list-style: none;
+      }
+      body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      table tr{
+        border-bottom: 1px solid silver;
+            }
+            
+            table tr:last-child{
+        border-bottom: 0px;
+            }
+            
+      table tr {
+        border-bottom: 1px solid #ebeaea;
+      }
+            
+            table tr:last-child{
+        border-bottom: 0px;
+            }
+            
+      table th,
+      table td {
+        text-align: right;
+        padding: 8px;
+            }
+            
+            table .left-aligh {
+        text-align: left;
+            }
 
-    @media screen and (max-width: 599px) {
-      /* This resizes tables and images to be 100% wide with a proportionate width */
-      table[class=emailwrapto100pc],
-      td[class=emailwrapto100pc],
-      img[class=emailwrapto100pc] {
-        width: 100% !important;
-        height: auto !important;
+      h1,
+      h4,
+      p {
+        margin: 0;
       }
-      table[class=emailwrapto90pc],
-      td[class=emailwrapto90pc],
-      img[class=emailwrapto90pc] {
-        width: 90% !important;
-        height: auto !important;
-        margin: 0 auto !important;
-      }
-      td[class=padding] {
-        padding-left: 0 !important;
-        padding-right: 0px !important;
-      }
-      td[class=nopadding] {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        padding-bottom: 0 !important;
-        padding-top: 0 !important;
-      }
-      td[class=textalignCenter] {
-        text-align: center !important;
-      }
-      img[class=resize] {
-        width: 90% !important;
-        height: 50px !important;
-      }
-      img[class=resize100] {
-        width: 100% !important;
-        height: auto !important;
-      }
-      img[class=resize1001] {
-        width: 100% !important;
-        height: auto !important;
-        padding: 10px 0 !important;
-      }
-      td[class=tabs] {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        text-align: center !important;
-        width: 90% !important;
-        float: left !important;
-        margin: 0 5% !important;
-      }
-      td[class=tabsnopadd] {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        padding-bottom: 0 !important;
-        padding-top: 0 !important;
-        text-align: center !important;
-        width: 90% !important;
-        float: left !important;
-        margin: 0 5% !important;
-      }
-      td[class=tabs100pc] {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        text-align: center !important;
-        width: 100% !important;
-        float: left !important;
-        margin: 0 0% !important;
-      }
-      td[class=invisible] {
-        display: none !important;
-      }
-      td[class=noheight] {
-        height: auto;
-        padding-bottom: 20px;
-      }
-    }
-    /* Additional Media Query for tablets */
+      
+            h1 {
+                font-family: 'Montserrat', sans-serif;
+            }
 
-    @media screen and (min-width: 620px) and (max-width: 1024px) {
-      /* Same as above */
-      /*table[class=emailwrapto100pc], img[class=emailwrapto100pc]{width:auto !important; max-width:738px; height:auto !important;}*/
-      a[href^=tel] {
-        color: inherit;
-        text-decoration: none;
+            h2,
+            h3,
+      h4{
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+            }
+
+            .small-font {
+                font-size: 12px;
+            }
+
+            .link {
+                text-decoration: none; color: #0f5bff;
+            }
+
+            .seperator {
+                background-color: black;
+                -webkit-print-color-adjust: exact; 
+                height: 20px;
+            }
+            
+            .bottom-space {
+                margin-bottom: 40px;
+            }
+            
+            .hard-bottom-space {
+                margin-bottom: 60px;
+            }
+            
+            .light-bottom-space {
+                margin-bottom: 20px;
+            }
+
+      .container {
+        padding: 20px 50px;
+        width: 1000px;
+        max-width: 90%;
+        margin: 0 auto;
       }
-      a img {
-        border: 0;
-        outline: 0;
+
+      .inv-title {
+        padding: 20px;
+                background-color: black;
+                -webkit-print-color-adjust: exact; 
+        color: white;
+                margin-left: -50px;
+                width: 80%;
       }
-      img {
-        border: 0;
-        outline: 0;
+
+      .inv-logo {
+                text-align: right;
+            }
+            .inv-logo img {
+                height: 90px;
+            }
+
+      /* header */
+      .inv-header {
+                display: flex;
+                flex-direction: column;
+        margin-bottom: 20px;
+                background-color:#fdfdfd;
+                -webkit-print-color-adjust: exact; 
+            }
+            
+            .inv-header .greeting {
+                align-items: center;
+                font-family: "Courier New", Courier, monospace;
+            }
+            .inv-header .greeting img {
+                height: 18px;
+            }
+
+            .inv-header .customer-info
+            {
+                display: flex;
+            }
+      .inv-header .customer-info > :nth-child(1) {
+        flex: 2;
       }
-      .a5q {
-        display: none !important;
+      .inv-header .customer-info > :nth-child(2) {
+        flex: 1;
+            }
+            
+      .inv-header h2 {
+        font-size: 20px;
+        margin: 0 0 0.3rem 0;
       }
-      table table table div {
-        display: none !important;
+      .inv-header ul li {
+        font-size: 15px;
+        padding: 3px 0;
       }
-    }
 
-  </style>
-</head>
+      /* body */
+    
+      .inv-body {
+        margin-bottom: 30px;
+            }
+            .inv-body th {
+                background-color: black;
+                -webkit-print-color-adjust: exact; 
+                padding: 10px 8px;
+                color: white;
+                font-weight: 700;
+                font-size: 24px;
+      }
 
-<body style="margin:0; padding:0;">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-    <tr>
-      <td align="center" valign="middle">
-        <table width="600" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-          <tr>
-            <td valign="top" align="left">
-              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-                <tr>
-                  <td height="10" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                </tr>
-                <tr>
-                  <td height="4" align="left" valign="top" bgcolor="#0F5BFF" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                </tr>
-                <tr>
-                  <td align="center" valign="top">
-                    <table width="545" border="0" cellspacing="0" cellpadding="0" class="emailwrapto90pc">
-                      <tr>
-                        <td valign="top" align="left">
-                          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
+      /* footer */
+      .inv-footer {
+        display: flex;
+        flex-direction: row;
+      }
+      .inv-footer > :nth-child(1) {
+        flex: 2;
+      }
+      .inv-footer > :nth-child(2) {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+            
+            <div class="inv-logo hard-bottom-space" >
+                <img src="https://proxim-bucket.s3.us-east-2.amazonaws.com/logo-proxim.png" />
+            </div>
 
-                            <!-- Begin Header -->
-                            <tr>
-                              <td height="34" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td align="left" valign="top">
-                                <a href="https://guimaraes.proximcity.pt"><img src="https://dev-proxim-bucket.s3.us-east-2.amazonaws.com/logo_cmg_dark_35e5e994cd.png" height="49"
-                                      alt="logo"></a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td height="31" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:22px; font-weight:bold; line-height:22px; color:#0F5BFF;">Confirmação da encomenda</td>
-                            </tr>
-                            <!-- End Header -->
+            <div class="inv-title bottom-space">
+                <h1>Confirmação da encomenda</h1>
+            </div>
 
-                            <!-- Begin Body -->
-                            <tr>
-                              <td align="left" valign="top">
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-                                  <tbody>
-                                    <tr>
-                                      <td align="left" valign="top">
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-                                          <tbody>
-                                            <tr>
-                                              <td align="left" valign="top" height="25" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">A sua encomenda</td>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Data</td>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Estado</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </td>
-                                    </tr>
 
-                                    <tr>
-                                      <td valign="top" align="left" height="10" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" align="left" height="2" style="line-height:2px; font-size:2px; border-top:solid 2px #efefee;">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" align="left" height="15" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td align="left" valign="top">
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-                                          <tbody>
-                                            <tr>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#0F5BFF; font-family:Arial, helvetica;"><a href="{{orderUrl}}" style="color:#0F5BFF;">{{order.referenceId}}</a></td>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">{{orderDate}}</td>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Não enviada</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" align="left" height="20" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                    </tr>
+      <div class="inv-header hard-bottom-space">
 
-                                    <tr>
-                                      <td valign="top" align="left" height="20" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td align="left" valign="top">
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-                                          <tbody>
-                                            <tr>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Morada de entrega</td>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Morada de faturação</td>
-                                              <td width="33%" align="left" valign="top" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Método de pagamento</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </td>
-                                    </tr>
-
-                                    <tr>
-                                      <td valign="top" align="left" height="15" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" align="left" height="2" style="line-height:1px; font-size:1px; border-top:solid 2px #efefee;">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" align="left" height="13" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td align="left" valign="top">
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-                                          <tbody>
-                                            <tr>
-                                              <td width="33%" align="left" valign="top" style="font-size:10px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">
-                                                {{#with shipping.address}}
-                                                  {{this.fullName}}<br>{{this.address}}<br>{{this.city}} {{this.region}} {{this.postal}}
-                                                {{/with}}
-                                              </td>
-                                              <td width="33%" align="left" valign="top" style="font-size:10px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">
-                                                {{#with shipping.address}}
-                                                  {{this.fullName}}<br>{{this.address}}<br>{{this.city}} {{this.region}} {{this.postal}}
-                                                {{/with}}
-                                              </td>
-                                              <td width="33%" align="left" valign="top" style="font-size:10px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">
-                                                {{#each billing.payments}}
-                                                  {{this.displayName}} ({{this.displayAmount}})<br />
-                                                {{/each}}
-                                              </td>
-                                            </tr>
-                                            <tr>
-                                              <td valign="top" align="left" height="40" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                              <td valign="top" align="left" style="font-size:14px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica; font-weight:bold;">Artigo(s)</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" align="left" height="15" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" align="left" height="2" style="line-height:1px; font-size:1px; border-top:solid 2px #efefee;">&nbsp;</td>
-                                    </tr>
-                                    {{#each combinedItems}}
-                                    <tr>
-                                      <td valign="top" align="left">
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-                                          <tbody>
-                                            <tr>
-                                              <td valign="top" align="left">
-                                                <table width="110" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-                                                  <tbody>
-                                                    <tr>
-                                                      <td valign="middle" align="left" height="15" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td valign="middle" align="left" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">{{quantity}} x</td>
-                                                      <td valign="top" align="center" width="30" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                                      <td valign="middle" align="left">
-                                                        {{#if imageURLs}}
-                                                          <img src="{{imageURLs.thumbnail}}" width="50" height="50" alt="" />
-                                                        {{else}}
-                                                          <img src="{{placeholderImage}}" width="50" height="50" alt="" />
-                                                        {{/if}}
-                                                      </td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                              </td>
-                                              <td width="180">&nbsp;</td>
-                                              <td valign="middle" align="left">
-                                                <table width="360" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-                                                  <tbody>
-                                                    <tr>
-                                                      <td align="left" valign="middle" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">{{variantTitle}}</td>
-                                                      <td align="right" valign="middle" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">{{price.displayAmount}}</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                              </td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" align="left" height="15" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" align="left" height="2" style="line-height:1px; font-size:1px; border-top:solid 2px #efefee;">&nbsp;</td>
-                                    </tr>
-                                    {{/each}}
-                                    <tr>
-                                      <td valign="top" align="right">
-                                        <table width="210" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-                                          <tbody>
-                                            <tr>
-                                              <td valign="top" align="left" height="20" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                              <td valign="top" align="right" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Subtotal: {{billing.subtotal}}</td>
-                                            </tr>
-                                            <tr>
-                                              <td valign="top" align="right" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Entrega: {{billing.shipping}}</td>
-                                            </tr>
-                                            <tr>
-                                              <td valign="top" align="right" style="font-size:12px; line-height:normal; color:#4c4c4d; font-family:Arial, helvetica;">Descontos: {{billing.discounts}}</td>
-                                            </tr>
-                                            <tr>
-                                              <td valign="top" align="left" height="10" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                              <td valign="top" align="left" height="2" style="line-height:1px; font-size:1px; border-top:solid 3px #4c4d4e;">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                              <td valign="top" align="left" height="10" style="line-height:1px; font-size:1px;">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                              <td valign="top" align="left">
-                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                  <tbody>
-                                                    <tr>
-                                                      <td valign="top" align="left" style="font-size:12px; line-height:normal; color:#a2a1a3; font-family:Arial, helvetica;">TOTAL:</td>
-                                                      <td valign="top" align="right" style="font-size:22px; line-height:normal; color:#4d4d4e; font-family:Arial, helvetica;">{{billing.total}}</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                              </td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                            <!-- End Body -->
-
-                            <!-- Begin footer -->
+               
+                
+             
+                <div class="bottom-space">
+                    <h1>{{shopName}}</h1>
+                </div>
+                <div class="greeting bottom-space">
+                    <span>
+                        Obrigado por preferir comprar no comércio local. Guimarães agradece.
+                    </span>
+                    <img src="https://proxim-bucket.s3.us-east-2.amazonaws.com/heart.png" alt="Obrigado">
+                </div>
+                
+                <div class="customer-info light-bottom-space">
+                    <div>
+                        {{#with shipping.address}}
+                            <h2>Informação</h2>
+                            <ul class="bottom-space">
+                                <li>{{this.fullName}}</li>
+                                <li>{{this.address}}</li>
+                                <li>{{this.city}} </li>
+                                <li>{{this.region}} | {{this.postal}}</li>
+                            </ul>
+                        {{/with}}
+                    </div>
+                    <div>
+                        <table>
                             <tr>
-                              <td height="32" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                            </tr>
-                            
-                            <tr>
-                              <td height="15" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                <th class="left-aligh">Ref.:</th>
+                                <td>{{order.referenceId}}</td>
                             </tr>
                             <tr>
-                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:17px;">Recebeu este email porque fez uma encomenda em {{shopName}}. Tem alguma pergunta ou sugestão? Envie-nos um email para <a href="mailto:info@proximcity.pt" style="text-decoration:none; color:#0F5BFF;">info@proximcity.pt</a></td>
+                                <th class="left-aligh">Data</th>
+                                <td>{{orderDate}}</td>
                             </tr>
-                            <!-- Begin Social Icons -->
-                            
-                            <tr>
-                              <td height="21" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:17px;">Siga-nos em</a></td>
-                            </tr>
-                            <tr>
-                              <td height="21" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td align="left" valign="top">
-                                <table border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
-                                  
-                                  <tr>
-                                    <td align="left" valign="top">
-                                      <a href="https://facebook.com/guimaraesproximcity" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:12px; color:#0F5BFF; margin-right: 20px;">Facebook</a>
-                                    </td>
-                                    
-                                    <td align="left" valign="top">
-                                      <a href="https://instagram.com/proximcity" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:12px; color:#0F5BFF;">Instagram</a>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td height="28" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td height="15" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                            </tr>
-                            <!-- End Social Icons -->
-                            <tr>
-                              <td height="3" align="left" valign="top" bgcolor="#0F5BFF" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td height="18" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:12px; color:#4d4c4d;">&copy; 2020 Guimarães Proximcity. Todos os direitos reservados</td>
-                            </tr>
-                            <tr>
-                              <td height="8" align="left" valign="top" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                            </tr>
-                            <!-- End footer -->
-
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
+                        </table>
+                    </div>
+                </div>
+      </div>
+      <div class="inv-body">
+        <table>
+          <thead>
+            <th class="left-aligh">Item</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+          </thead>
+          <tbody>
+                        {{#each combinedItems}}
+            <tr>
+              <td class="left-aligh">
+                <h4>{{title}}</h4>
+                <p class="small-font">
+                                        {{#each attributes}}
+                                            <strong class="">{{label}}</strong> {{value}}
+                                            {{#unless @last}},{{/unless}}
+                                        {{/each}}
+                                
+                                </p>
+              </td>
+              <td>{{quantity}}</td>
+              <td>{{price.displayAmount}}</td>
+                        </tr>
+                        {{/each}}
+          </tbody>
         </table>
-      </td>
-    </tr>
-  </table>
-
-</body>
+      </div>
+      <div class="inv-footer bottom-space">
+        <div><!-- required --></div>
+        <div>
+          <table>
+            <tr>
+              <th class="left-aligh">Sub total</th>
+              <td>{{billing.subtotal}}</td>
+            </tr>
+            <tr>
+              <th class="left-aligh">Envio</th>
+              <td>{{billing.shipping}}</td>
+            </tr>
+            <tr>
+              <th class="left-aligh">Total</th>
+              <td>{{billing.discounts}}</td>
+            </tr>
+          </table>
+        </div>
+            </div>
+            <div class="bottom-info bottom-space">
+                    <p class="light-bottom-space">Recebeu este email porque fez uma encomenda em {{shopName}}. Tem alguma pergunta ou sugestão? Envie-nos um email para <a class="link" href="mailto:info@proximcity.pt">info@proximcity.pt</a></p>
+                    
+                    <p>Siga-nos no 
+                        <a class="link" href="https://facebook.com/guimaraesproximcity">Facebook</a> ou
+                        <a class="link" href="https://instagram.com/proximcity">Instagram</a></p>
+            </div>
+            <div class="seperator light-bottom-space"></div>
+            <div class="copyright">
+                <p>&copy; 
+                    2020 Guimarães Proximcity. Todos os direitos reservados
+                </p>
+            </div>
+    </div>
+  </body>
 `;
