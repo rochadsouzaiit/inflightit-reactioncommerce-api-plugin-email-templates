@@ -202,15 +202,15 @@ export default `
                 <div class="customer-info light-bottom-space">
                     <div>
 						<h2>Informação do utilizador</h2>
-						{{#with shipping.address}}
 						<ul class="bottom-space">
+							{{#with shipping.address}}
 							<li>{{this.fullName}}</li>
 							<li>{{this.address}}</li>
 							<li>{{this.city}} </li>
 							<li>{{this.region}} | {{this.postal}}</li>
+							{{/with}}
 							<li>{{billing.taxNumber}}</li>
 						</ul>
-						{{/with}}
 
 						<h2>Contactos</h2>
 						<ul class="bottom-space">
